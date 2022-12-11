@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vitta/Global_widgets/commons.dart';
 
-import 'Global_widgets/custom_button.dart';
+import 'Global_widgets/custom_widgets.dart';
 
 void main() {
   runApp(const MyApp());
