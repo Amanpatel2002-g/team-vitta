@@ -13,18 +13,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: globalScaffoldBackgroundColor),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("This is the appbar"),
-        ),
+        appBar: customeAppBar(text: "This is the appbar"),
         body: Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(horizontal: 30),
-            child:  CustomButton(
+            child: CustomButton(
               width: double.infinity,
               text: "Button here",
-              ontap: (){},
+              ontap: () {},
             )),
       ),
     );

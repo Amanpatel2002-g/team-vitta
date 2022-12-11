@@ -34,3 +34,10 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+AppBar customeAppBar({required text}) {
+  return AppBar(
+    title: Text(text),
+    backgroundColor: globalAppBarColor,
+  );
+}
