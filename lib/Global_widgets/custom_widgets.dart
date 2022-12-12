@@ -7,13 +7,13 @@ import 'package:vitta/Global_widgets/commons.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
-    this.height,
-    this.width,
+    this.height = 50,
+    this.width = double.infinity,
     required this.text,
     required this.ontap,
   }) : super(key: key);
-  final double? height;
-  final double? width;
+  final double height;
+  final double width;
   final String text;
   final VoidCallback ontap;
   @override
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: ontap,
       style: ElevatedButton.styleFrom(
-          minimumSize: const Size(double.infinity, 50),
+          minimumSize: Size(width, height),
           surfaceTintColor: const Color.fromARGB(255, 164, 107, 15),
           backgroundColor: globalButtonColor),
       child: Text(
