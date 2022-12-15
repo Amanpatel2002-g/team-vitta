@@ -30,10 +30,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
-  fl_chart: ^0.55.2
+  fl_chart: ^0.55.2  cupertino_icons: ^1.0.2
+  fireauth: ^0.9.0
+  firebase_core_platform_interface: 4.5.1
+  pinput: ^2.2.16
+  intl_phone_field: ^3.1.0
   flutter:
     sdk: flutter
-  
 
 dev_dependencies:
   flutter_lints: ^2.0.0
