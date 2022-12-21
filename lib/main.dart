@@ -1,7 +1,7 @@
 import 'package:fireauth/fireauth.dart';
 import 'package:flutter/material.dart';
 import 'package:vitta/Global_widgets/commons.dart';
-import 'package:vitta/features/auth/screens/auth_screen.dart'
+import 'package:vitta/features/auth/screens/auth_screen.dart';
 import 'package:vitta/features/home/home_screen.dart';
 import 'package:vitta/features/auth/screens/otp_vecification_screen.dart';
 import 'package:vitta/routes/route.dart';
@@ -24,6 +24,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme:
             ThemeData(scaffoldBackgroundColor: globalScaffoldBackgroundColor),
-        home: const AuthScreen());
+        home: const homescreen());
   }
 }
