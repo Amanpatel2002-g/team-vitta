@@ -14,3 +14,4 @@ class consent extends StatelessWidget {
     );
   }
 }
+
