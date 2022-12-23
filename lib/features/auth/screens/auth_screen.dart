@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vitta/Global_widgets/commons.dart';
-import 'package:vitta/Global_widgets/custom_widgets.dart';
+import 'package:vitta/Global_widgets_and_files/commons.dart';
+import 'package:vitta/Global_widgets_and_files/custom_widgets.dart';
 import 'package:vitta/features/auth/screens/otp_vecification_screen.dart';
 import 'package:vitta/features/auth/services/auth_service.dart';
 import 'package:vitta/features/auth/widgets/textInputField.dart';

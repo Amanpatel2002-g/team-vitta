@@ -3,8 +3,8 @@ import 'package:fireauth/fireauth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-import 'package:vitta/Global_widgets/commons.dart';
-import 'package:vitta/Global_widgets/custom_widgets.dart';
+import 'package:vitta/Global_widgets_and_files/commons.dart';
+import 'package:vitta/Global_widgets_and_files/custom_widgets.dart';
 
 class OTPVerificationScreen extends StatelessWidget {
   final String verificationId;

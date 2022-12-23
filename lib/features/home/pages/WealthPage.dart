@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vitta/features/home/pages/wealth%20page/chartss.dart';
+import 'package:vitta/features/home/widgets/chartss.dart';
 
 class wealthpage extends StatefulWidget {
   const wealthpage({super.key});

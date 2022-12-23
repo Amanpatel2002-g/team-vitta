@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:vitta/Global_widgets/commons.dart';
+import 'package:vitta/Global_widgets_and_files/commons.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({

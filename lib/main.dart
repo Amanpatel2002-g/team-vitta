@@ -1,21 +1,45 @@
+import 'dart:io';
 import 'package:fireauth/fireauth.dart';
 import 'package:flutter/material.dart';
-import 'package:vitta/Global_widgets/commons.dart';
-import 'package:vitta/features/auth/screens/auth_screen.dart';
-import 'package:vitta/features/home/home_screen.dart';
-import 'package:vitta/features/auth/screens/otp_vecification_screen.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:vitta/Global_widgets_and_files/commons.dart';
+import 'package:vitta/features/consent/screens/Consent_page.dart';
 import 'package:vitta/routes/route.dart';
 
-import 'Global_widgets/custom_widgets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  // await Permission.camera.request();
+  // await Permission.microphone.request();
+  // await Permission.storage.request();
+
+  if (Platform.isAndroid) {
+    await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
+
+    var swAvailable = await AndroidWebViewFeature.isFeatureSupported(
+        AndroidWebViewFeature.SERVICE_WORKER_BASIC_USAGE);
+    var swInterceptAvailable = await AndroidWebViewFeature.isFeatureSupported(
+        AndroidWebViewFeature.SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST);
+
+    if (swAvailable && swInterceptAvailable) {
+      AndroidServiceWorkerController serviceWorkerController =
+          AndroidServiceWorkerController.instance();
+
+      await serviceWorkerController
+          .setServiceWorkerClient(AndroidServiceWorkerClient(
+        shouldInterceptRequest: (request) async {
+          return null;
+        },
+      ));
+    }
+  }
+
+  runApp(const MainScreen());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainScreen extends StatelessWidget {
+  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +48,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme:
             ThemeData(scaffoldBackgroundColor: globalScaffoldBackgroundColor),
-        home: const homescreen());
+        home: const ConsentPage());
   }
 }
